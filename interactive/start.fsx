@@ -70,3 +70,10 @@ printfn "Printing an int %i, a float %f, a bool %b" 1 2.0 true
 printfn "A string %s, and something generic %A" "hello" [1;2;3;4]
 
 printfn "twoTuple=%A,\nPerson=%A,\nTemp=%A,\nEmployee=%A" twoTuple person1 temp worker
+
+// Page 3
+
+let sumOfSquares n =
+    [1..n]
+    |> List.map square
+    |> List.sum
