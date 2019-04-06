@@ -99,3 +99,13 @@ let myCallback (reader:IO.StreamReader) url =
 
 // test
 let google = fetchUrl myCallback "https://google.com"
+
+// 'baking in' the callback
+
+let fetchURL2 = fetchUrl myCallback
+let google2 = fetchURL2 "http://google.com"
+let bbc     = fetchURL2 "http://news.bbc.co.uk"
+let sites = ["http://bing.com";
+             "http://google.com";
+             "http://yahoo.com"]
+sites |> List.map fetchURL2
