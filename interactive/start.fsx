@@ -109,3 +109,20 @@ let sites = ["http://bing.com";
              "http://google.com";
              "http://yahoo.com"]
 sites |> List.map fetchURL2
+
+// Page 6
+// Algebraic types
+
+type IntAndBool = {intPart: int; boolPart: bool}
+let x = {intPart=1; boolPart=false}
+
+type IntOrBool = 
+    | IntChoice of int
+    | BoolChoice of bool
+let y = IntChoice 42
+let z = BoolChoice true
+
+
+// "Data types do not have any behavior associated 
+// with them, and functions do not contain data – 
+// they just transform data types into other data types."
